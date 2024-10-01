@@ -48,7 +48,7 @@ def main():
             speech_text = recognize_speech_from_mic()
 
             if speech_text:
-
+                    print(f"You said: {speech_text}")
                     if any(phrase in speech_text.lower() for phrase in ["halo close", "halo exit", "halo turn off"]):
                         speak("Turning off, goodbye!")
                         break
@@ -68,6 +68,6 @@ def main():
 
     except Exception as e:
         print(f"An error occurred: {e}")
-
+    input("Press Enter to exit...")
 if __name__ == "__main__":
     main()
